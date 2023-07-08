@@ -8,6 +8,7 @@ class Message(db.Model):
     customerId = db.Column(db.Integer, nullable=False)
     type = db.Column(db.Text, nullable=False)
     amount = db.Column(db.Text, nullable=False)
+    created_at = db.Column(db.DateTime, default=db.func.current_timestamp())
 
     def __init__(self, uuid: str, customerId: int, type: str, amount: str):
         self.uuid = uuid
