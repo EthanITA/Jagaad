@@ -1,10 +1,9 @@
 from datetime import datetime
 
-from flask import Flask, request, make_response, jsonify
+from flask import request, make_response, jsonify
 
+from models.db import app
 from models.message import Message
-
-app = Flask(__name__)
 
 
 @app.post('/message')

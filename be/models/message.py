@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from app import db, app
+from .db import db, app
 
 
 class Message(db.Model):
