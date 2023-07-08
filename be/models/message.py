@@ -27,7 +27,7 @@ class Message(db.Model):
         """
         try:
             # Checking for amount's precision
-            if len(json['amount'].split('.')[-1]) <= 3:
+            if len(json['amount'].split('.')[-1]) != 3:
                 raise Exception
             return Message(
                 str(json['uuid']),
